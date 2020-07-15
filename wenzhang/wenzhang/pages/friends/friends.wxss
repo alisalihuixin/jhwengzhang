@@ -1,0 +1,127 @@
+
+
+page {
+    width: 100%;
+    background-color: #F4F4F4;
+}
+
+.header {
+    width: 100%;
+    height: 300rpx;
+    text-align: center;
+    background-color: #69c3aa;
+    position: relative;
+}
+
+.title {
+    width: 500rpx;
+    height: 140rpx;
+    margin-top: 40rpx;
+}
+
+.wave {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    height: 87rpx;
+    width: 100%;
+}
+
+.name {
+    height: 100rpx;
+    text-align: center;
+    position: relative;
+}
+
+.name text {
+    font-size: 42rpx;
+    color: #d39705;
+}
+
+.name .name_line {
+    position: absolute;
+    bottom: 0rpx;
+    left: 10%;
+    width: 80%;
+    height: 2rpx;
+    border-bottom: 1rpx dashed #69c3aa;
+}
+
+.content {
+    width: auto;
+    padding: 40rpx 10%;
+    line-height: 60rpx;
+    text-align: justify;
+    position: relative;
+}
+
+.publish {
+    display: block;
+    color: #69c3aa;
+    font-size: 28rpx;
+    text-align: left;
+    margin-top: 30rpx;
+}
+
+.content .content_line {
+    position: absolute;
+    bottom: 0rpx;
+    left: 10%;
+    width: 80%;
+    height: 2rpx;
+    border-bottom: 1rpx dashed #69c3aa;
+}
+
+.share {
+    width: auto;
+    padding: 30rpx 10%;
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    align-items: center;
+}
+
+.share view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.share view text{
+    margin-top: 10rpx;
+    color: #333;
+    font-size: 32rpx;
+}
+
+.share image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.shareImage{
+  position: relative;
+}
+
+.share button{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  z-index: 9
+}
+
+.footer button::after {
+  border: none;
+}
+
+.canvas-box {
+ width: 300rpx;
+ margin: 20rpx auto 0;
+ height: 300rpx;
+ opacity: 0;
+}
+.copy{
+    border: 1px solid #999;
+    border-radius: 15rpx;
+    padding: 5rpx 20rpx;
+    background-color: #f5f5f5;
+}

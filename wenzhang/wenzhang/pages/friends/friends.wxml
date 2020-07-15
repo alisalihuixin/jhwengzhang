@@ -1,0 +1,29 @@
+<view class='share'>
+	<view class='name'>
+		<image src="{{detail.avatar}}"></image>
+
+	</view>
+	 <view class='name'>
+		<text>{{detail.name}}</text>
+		<view class='name_line'></view>
+	</view>
+	<view class='content'>
+		<text class='publish'>{{detail.title}}</text>
+		<view class='content_line'></view>
+	</view>
+	<view class='content' wx:if="{{detail.brief}}">
+		<text class='publish'>{{detail.brief}}</text>
+		<view class='content_line'></view>
+		<view bindtap="copyText" class="copy">点击复制文字</view>
+	</view>
+
+	
+	<view class='share'>
+		<view bindtap='save'>
+			<image src='../../img/down.png'></image>
+			<text>生成专属二维码</text>
+		</view>
+	</view>
+
+
+</view>

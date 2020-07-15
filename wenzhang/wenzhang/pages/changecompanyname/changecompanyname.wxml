@@ -1,0 +1,7 @@
+<view>
+	<view wx:for="{{company}}" style="width:100%;height:80rpx;line-height:80rpx;padding-left:20rpx;background:#fff;font-size:32rpx">您的公司名称：{{item.companyname}}</view>
+	<view class="companyname">
+		<input style="width:100%;height:80rpx;line-height:80rpx;text-indent:20rpx;background:#fff;font-size:32rpx" placeholder="请输入修改的公司名称" bindinput="input" value="{{newcompany}}"></input>
+	</view>
+	<view class="submit" bindtap="submit">提交</view>
+</view>

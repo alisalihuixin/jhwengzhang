@@ -1,0 +1,105 @@
+/* pages/category/category.wxss */
+
+.scrollview-lists {
+  /* width: 100%; */
+  height: 185rpx;
+  padding-top: 40rpx;
+  padding-left: 28rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.leftwrap {
+  float: left;
+}
+
+.about {
+  width: 424rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  color: #0F1E2D;
+  height: 104rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  
+}
+
+.share1 {
+  height: 100rpx;
+}
+
+.share-wrap {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.share-wrap image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+
+.rightwrap {
+  width: 250rpx;
+  height: 150rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.rightwrap image {
+  width: 219rpx;
+  height: 150rpx;
+}
+
+.sharetext {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #3157FF;
+  line-height: 70rpx;
+}
+
+.nowlook {
+  font-size: 26rpx;
+  color: #9FA3A9;
+  line-height: 70rpx;
+  float: right;
+}
+
+.sharewrap{
+  position: fixed;
+  left: 10%;
+  top: 300rpx;
+  width: 80%;
+  height: 310rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 0 15rpx 4rpx rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.friend{
+  width: 50%;
+  text-align: center;
+  font-size: 26rpx;
+  float: left;
+  height: 120rpx;
+  padding: 30rpx 0;
+  font-weight: bold;
+}
+button.friend{
+  width: 50% !important;
+  text-align: center;
+  font-size: 26rpx;
+  float: left;
+  height: 140rpx;
+  padding-top: 30rpx !important;
+  padding-bottom: 30rpx !important;
+}
+.friend image{
+  width: 70rpx;
+  height: 70rpx;
+}

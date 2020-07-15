@@ -1,0 +1,9 @@
+<view class='content'>
+	<view>申请获取以下权限</view>
+	<text>获得你的电话信息</text>
+</view>
+<view style="width:80%;margin:0 auto">
+	<button class='bottom' type='primary' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+		授权登录
+	</button>
+</view>

@@ -1,0 +1,33 @@
+<view>
+
+	<view wx:for="{{left}}" bindtap="scroll" class="{{navState==index?'navstyleswitch':''}}" wx:key="index" style="background:#fff;height:90rpx;float:left;width:25%" data-id="{{item.id}}">
+		<text class="text">{{item.text}}</text>
+		<view class="jtwrap">
+			<image src="../../img/hui.png" class="jt" bindtap="change" data-id="{{item.id}}"></image>
+		</view>
+	</view>
+	<view wx:if="{{flage}}" class="tuwen">
+		<view class="allwrap">
+			<text class="alllists {{status=='0'?'click':''}}" data-id="0" bindtap="click">全部</text>
+			<text wx:for="{{subcategories}}" bindtap="click" class="alllists {{status==item.id?'click':''}}" wx:key="index" data-id="{{item.id}}">{{item.text}}</text>
+		</view>
+		<view class="reset" bindtap="submit">确认</view>
+	</view>
+
+
+	<view class="scrollview-lists" bindtap="lists" id="text{{index}}" wx:key="index" wx:for="{{content}}">
+		<view class="leftwrap">
+			<view class="about" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</view>
+			<view class="share1">
+				<view class="share-wrap">
+					<image src="../../img/wj.png"></image>
+				</view>
+				<text class="sharetext" bindtap="getmy" data-id="{{item.id}}">变成我的饵料</text>
+				<text class="nowlook" bindtap="changepic" data-id="{{item.id}}">立即查看</text>
+			</view>
+		</view>
+		<view class="rightwrap">
+			<image src="{{item.thumburl}}"></image>
+		</view>
+	</view>
+</view>

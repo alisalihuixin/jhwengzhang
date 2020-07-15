@@ -1,0 +1,4 @@
+/* pages/usebook/usebook.wxss */
+view{
+  margin-left: 20rpx;
+}

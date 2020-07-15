@@ -1,0 +1,147 @@
+/* pages/main/main.wxss */
+.navstyleswitch {
+  color: #3158FF;
+}
+
+.line1 {
+  border-bottom: 2px solid #3158FF;
+}
+
+scroll-view {
+  background-color: #fff;
+}
+
+scroll-view view {
+  padding: 0rpx 10rpx;
+  float: left;
+}
+
+.jtwrap {
+  width: 16rpx;
+  float: left;
+
+}
+
+.jt {
+  width: 31rpx;
+  height: 22rpx;
+  margin-top: 37rpx;
+}
+
+.text {
+  float: left;
+  padding: 0 10rpx 0 20rpx;
+  line-height: 90rpx;
+  font-size: 30rpx;
+}
+
+.scrollview-lists {
+  overflow: hidden;
+  /* width: 100%; */
+  height: 185rpx;
+  padding-top: 40rpx;
+  padding-left: 28rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.leftwrap {
+  float: left;
+}
+
+.about {
+  width: 424rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  color: #0F1E2D;
+  height: 104rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.share1 {
+  height: 100rpx;
+}
+
+.share-wrap {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.share-wrap image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+
+.rightwrap {
+  width: 250rpx;
+  height: 150rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.rightwrap image {
+  width: 219rpx;
+  height: 150rpx;
+}
+
+.sharetext {
+  margin-left: 5rpx;
+  font-size: 26rpx;
+  color: #3157FF;
+  line-height: 70rpx;
+}
+
+.nowlook {
+  font-size: 26rpx;
+  color: #9FA3A9;
+  line-height: 70rpx;
+  float: right;
+}
+
+.tuwen {
+  width: 100%;
+  position: absolute;
+  top: 90rpx;
+  left: 0;
+  background-color: #fff;
+  z-index: 99;
+}
+.allwrap{
+  width: 100%;
+  overflow: hidden;
+}
+.alllists {
+  width: 155rpx;
+  height: 58rpx;
+  background-color: #fff;
+  border-radius: 29rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #999;
+  border: 1px solid rgba(220, 220, 220, 1);
+  line-height: 58rpx;
+  text-align: center;
+ margin: 30rpx 0 30rpx 20rpx;
+}
+
+.click {
+  background: rgba(54, 109, 255, 0.05);
+  border: 1px solid rgba(54, 109, 255, 1);
+  color: #366DFF;
+}
+
+.reset {
+  width: 100%;
+  height: 80rpx;
+  background: rgba(54, 109, 255, 1);
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+}

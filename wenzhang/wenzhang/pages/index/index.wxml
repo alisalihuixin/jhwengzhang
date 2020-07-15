@@ -1,0 +1,188 @@
+<!--index.wxml-->
+<view class="swiper-tab">
+	<view class="swiper-tabel-list {{currentTab==0 ? 'on' :''}}" data-current="0" bindtap="swichNav">资讯
+		<view class="line" wx:if="{{currentTab==0 ? 'on' :''}}"></view>
+	</view>
+	<view class="swiper-tabel-list {{currentTab==1 ? 'on' :''}}" data-current="1" bindtap="swichNav" wx:if="{{video.length}}">视频
+		<view class="line" wx:if="{{currentTab==1 ? 'on' :''}}"></view>
+	</view>
+	<view wx:if="{{currentTab==0}}" class="swiper-box" duration="300" bindtap="bindChange">
+
+		<!-- 资讯 -->
+		<!-- 轮播图banner -->
+		<swiper class="wrap-bn" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+			<block wx:for="{{bnrUrl}}" wx:for-index="index" wx:key="index">
+				<swiper-item>
+					<image src="{{item.bannerurl}}" class="img-slide" mode="aspectFill"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+
+		<!-- tablists 助医美-->
+		<view class="lists-wrap">
+			<view class="tab-wrap-lists" wx:for="{{categorie}}" wx:key="index" data-id="{{item.id}}" bindtap="category">
+				<view class="tab-list">
+					<image src="{{item.attr.iconurl}}" class="icon1"></image>
+				</view>
+				<text>{{item.text}}</text>
+			</view>
+		</view>
+
+		<!-- new information -->
+		<view class="new-information">
+			<view class="ling-wrap">
+				<image src="../../img/tz.png" class="ling"></image>
+			</view>
+			<text class="nownews">最新</text>
+			<view class="goswiper-wrap">
+				<swiper class="goswiper" vertical="true" autoplay="true" circular="true" interval="2000">
+					<block wx:for="{{msgList}}" wx:key="index">
+						<swiper-item>
+							<view class="swiper-items">{{msgList.invitermember.nickname}}
+								<text style="color:#3158FF">刚刚</text>
+								获取一个用户信息</view>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+		</view>
+
+		<!-- 内容轮播 -->
+		<view class="content-wrap"  wx:if="{{video.length}}">
+			<swiper class="swipercontent">
+				<block>
+					<swiper-item wx:for="{{video}}" wx:key="index">
+						<view class="conmain-lists">
+							<view class="video-wrap">
+								<video controls="true" poster="{{item.thumburl}}" src="{{item.videourl}}"></video>
+							</view>
+							<view class="hot">
+								<text class="hotnews">热门</text>
+								<text class="title" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</text>
+								<text class="time">{{item.time}}</text>
+								<text  wx:for="{{item.tags}}" class="biao2" wx:key="index">{{item}}</text>
+								<button class="share" data-title="{{item.title}}" data-brief="{{item.brief}}"  data-thumburl="{{item.thumburl}}" data-id="{{item.id}}"  bindtap="viedoshare">立即分享</button>
+							</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+
+<!-- 分享到好友 朋友圈 -->
+		<view wx:if="{{viedoshare}}" style="background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;left:0;top:0">
+			<view class="sharewrap">
+				<view class="header-share" style="width:100%;height:60rpx;line-height:60rpx;font-size:30rpx;text-align:center">
+					分享给好友
+				</view>
+				<view style="border-bottom:1px solid #eee;overflow:hidden">
+					<button class="friend friends" open-type="share">
+						<image src="../../img/weixin.png"></image>
+						<view>分享给好友</view>
+					</button>
+					<view class="friend quan" bindtap="sharequan">
+						<image src="../../img/pengyou.png"></image>
+						<view>分享到朋友圈</view>
+					</view>
+				</view>
+				<view bindtap="cancel" style="width:100%;font-size:30rpx;text-align:center;line-height:64rpx">取消</view>
+			</view>
+		</view>
+
+		<!-- swiper -->
+		<scroll-view scroll-x style=" white-space: nowrap; display: flex;height:90rpx;line-height:90rpx">
+			<text wx:for="{{categorie}}" bindtap="scroll" data-index="{{index}}" class="{{navState==index?'navstyleswitch':''}}" data-id="{{item.id}}" wx:key="index">{{item.text}}
+			</text>
+		</scroll-view>
+		<view class="scrollview-lists" bindtap="lists" id="text{{index}}" wx:key="index" wx:for="{{content}}">
+			<view class="leftwrap">
+				<view class="about" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</view>
+				<view class="share1">
+					<view class="share-wrap">
+						<image src="../../img/fx.png"  data-title="{{item.title}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" data-brief="{{item.brief}}" bindtap="viedoshare"></image>
+					</view>
+					<text data-title="{{item.title}}" class="sharetext"  data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" data-brief="{{item.brief}}" bindtap="viedoshare">分享</text>
+					<text class="nowlook" bindtap="changepic" data-id="{{item.id}}">立即查看</text>
+				</view>
+			</view>
+			<view class="rightwrap">
+				<image src="{{item.thumburl}}"></image>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{currentTab==1}}">
+
+		<!-- 视频 -->
+		<swiper class="wrap-bn" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+			<block wx:for="{{bnrUrlvideo}}" wx:for-index="index" wx:key="index">
+				<swiper-item>
+					<image src="{{item.bannerurl}}" class="img-slide" mode="aspectFill"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+
+		<!-- swiper -->
+		<scroll-view scroll-x style=" white-space: nowrap; display: flex;height:90rpx;line-height:90rpx;margin-top:30rpx">
+			<text wx:for="{{categorie}}" bindtap="scroll" data-id="{{item.id}}" data-index="{{index}}" class="{{navState==index?'navstyleswitch':''}}" wx:key="index">{{item.text}}
+			</text>
+		</scroll-view>
+
+		<!-- 内容轮播 -->
+		<view class="content-wrap" wx:if="{{video1.length}}">
+			<swiper class="swipercontent">
+				<block>
+					<swiper-item wx:for="{{video1}}" wx:key="index">
+						<view class="conmain-lists">
+							<view class="video-wrap">
+								<video controls="true" poster="{{item.thumburl}}" src="{{item.videourl}}"></video>
+							</view>
+							<view class="hot">
+								<text class="hotnews">热门</text>
+								<text class="title" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</text>
+								<text class="time">{{item.time}}</text>
+								<text  wx:for="{{item.biaoqian}}" class="biao2" wx:key="index">{{item.txt}}</text>
+								<button class="share" data-title="{{item.title}}"  bindtap="viedoshare" data-brief="{{item.brief}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}">立即分享</button>
+							</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+
+		<view class="scrollview-lists" bindtap="lists" id="text{{index}}" wx:key="index" wx:for="{{content}}">
+			<view class="leftwrap">
+				<view class="about" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</view>
+				<view class="share1">
+					<view class="share-wrap">
+						<image src="../../img/fx.png" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" bindtap="viedoshare" data-brief="{{item.brief}}"></image>
+					</view>
+					<text class="sharetext" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" bindtap="viedoshare" data-brief="{{item.brief}}">分享</text>
+					<text class="nowlook" bindtap="changepic" data-id="{{item.id}}">立即查看</text>
+				</view>
+			</view>
+			<view class="rightwrap">
+				<image src="{{item.thumburl}}"></image>
+			</view>
+		</view>
+
+	</view>
+</view>
+<!-- 分享到好友 朋友圈 -->
+		<view wx:if="{{viedoshare}}" style="background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;left:0;top:0">
+			<view class="sharewrap">
+				<view class="header-share" style="width:100%;height:60rpx;line-height:60rpx;font-size:30rpx;text-align:center">
+					分享给好友
+				</view>
+				<view style="border-bottom:1px solid #eee;overflow:hidden">
+					<button class="friend friends" open-type="share">
+						<image src="../../img/weixin.png"></image>
+						<view>分享给好友</view>
+					</button>
+					<view class="friend quan" bindtap="sharequan">
+						<image src="../../img/pengyou.png"></image>
+						<view>分享到朋友圈</view>
+					</view>
+				</view>
+				<view bindtap="cancel" style="width:100%;font-size:30rpx;text-align:center;line-height:64rpx">取消</view>
+			</view>
+		</view>

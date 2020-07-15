@@ -1,0 +1,15 @@
+/* pages/changecompanyname/changecompanyname.wxss */
+.companyname{
+  width: 100%;
+  height: 100rpx;
+}
+.submit{
+  width: 30%;
+  margin:0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #3158FF;
+  border-radius: 20rpx;
+}

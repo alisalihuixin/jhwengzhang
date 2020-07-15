@@ -1,0 +1,3 @@
+<view>
+	<rich-text nodes="{{usebook.content}}"></rich-text>
+</view>

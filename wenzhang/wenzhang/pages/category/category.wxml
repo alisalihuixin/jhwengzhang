@@ -1,0 +1,36 @@
+<view wx:if="{{!content.length}}" style="width:100%;height:80rpx;line-height:80rpx;color:#666;text-align:center;background:#eee">--暂无数据--</view>
+<view class="scrollview-lists" bindtap="lists" id="text{{index}}" wx:key="index" wx:for="{{content}}">
+	<view class="leftwrap">
+		<view class="about" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</view>
+		<view class="share1">
+			<view class="share-wrap">
+				<image src="../../img/fx.png" data-brief="{{item.brief}}" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" bindtap="viedoshare"></image>
+			</view>
+			<text class="sharetext" data-brief="{{item.brief}}" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}" data-id="{{item.id}}" bindtap="viedoshare">分享</text>
+			<text class="nowlook" bindtap="changepic" data-id="{{item.id}}">立即查看</text>
+		</view>
+	</view>
+	<view class="rightwrap">
+		<image src="{{item.thumburl}}"></image>
+	</view>
+</view>
+
+<!-- 分享到好友 朋友圈 -->
+		<view wx:if="{{viedoshare}}" style="background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;left:0;top:0">
+			<view class="sharewrap">
+				<view class="header-share" style="width:100%;height:60rpx;line-height:60rpx;font-size:30rpx;text-align:center">
+					分享给好友
+				</view>
+				<view style="border-bottom:1px solid #eee;overflow:hidden">
+					<button class="friend friends" open-type="share">
+						<image src="../../img/weixin.png"></image>
+						<view>分享给好友</view>
+					</button>
+					<view class="friend quan" bindtap="sharequan">
+						<image src="../../img/pengyou.png"></image>
+						<view>分享到朋友圈</view>
+					</view>
+				</view>
+				<view bindtap="cancel" style="width:100%;font-size:30rpx;text-align:center;line-height:64rpx">取消</view>
+			</view>
+		</view>

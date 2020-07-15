@@ -1,0 +1,117 @@
+<view class="allbody">
+	<view class="header" bindtap="login">
+		<view class="info">
+			<view class="avarap">
+				<open-data type="userAvatarUrl" class="user-avatar" wx:if="{{user}}"></open-data>
+			</view>
+			<view style="line-height:100rpx;color:#fff;margin-left:100rpx;font-size:40rpx" wx:if="{{!user}}">点击登录</view>
+			<open-data type="userNickName" class="nick" wx:if="{{user}}"></open-data>
+			<text class="phone" wx:if="{{user && phone}}">{{phone}}</text>
+			<button wx:if="{{user && !phone}}" class="phone" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击获取电话号</button>
+		</view>
+		<!-- 饲料 -->
+		<view class="three">
+			<view class="siliao">
+				<text>{{membernum.collectionCount}}</text>
+				<text>饲料</text>
+			</view>
+			<view class="zhuanfa">
+				<text>{{membernum.shareCount}}</text>
+				<text>转发</text>
+			</view>
+			<view class="huoke">
+				<text>{{membernum.inviteCount}}</text>
+				<text>获客</text>
+			</view>
+		</view>
+		<view class="vip" bindtap="bindvip">
+			<view class="vipwrap">
+				<image src="../../img/vip.png" class="vipimg"></image>
+			</view>
+			<text class="my myvip">我的会员</text>
+			<text class="my vipdetail">查看详情</text>
+			<view class="jt">
+				<image src="../../img/jt1.png"></image>
+			</view>
+		</view>
+	</view>
+	<view bindtap="login">
+		<view class="lists first" bindtap="persontotal">
+			<view class="iconimg">
+				<image src="../../img/gl.png"></image>
+			</view>
+			<text class="persontotal">个人获客数据统计</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+		<view class="lists" bindtap="companytotal">
+			<view class="iconimg">
+				<image src="../../img/sy.png"></image>
+			</view>
+			<text class="persontotal">公司获客数据统计
+			</text>
+			<text style="color:#999;font-size:26rpx;position:absolute;right:105rpx">仅管理员可见</text>
+
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+		<view class="lists" bindtap="changcompanyname">
+			<view class="iconimg">
+				<image src="../../img/bg.png"></image>
+			</view>
+			<text class="persontotal">修改公司名称</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+		<view class="lists" bindtap="myerliao">
+			<view class="iconimg">
+				<image src="../../img/si.png"></image>
+			</view>
+			<text class="persontotal">我的饵料</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+		<view class="lists" bindtap="usebook">
+			<view class="iconimg">
+				<image src="../../img/zl.png"></image>
+			</view>
+			<text class="persontotal">使用手册</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+		<button class="lists" open-type="share">
+			<view class="iconimg">
+				<image src="../../img/zf.png"></image>
+			</view>
+			<text class="persontotal">转发好友</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</button>
+		<view class="lists" bindtap="parter">
+			<view class="iconimg">
+				<image src="../../img/hhr.png"></image>
+			</view>
+			<text class="persontotal">合伙人</text>
+			<view class="jt2">
+				<image src="../../img/jt2.png"></image>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="lists" bindtap="quit">
+		<view class="iconimg">
+			<image src="../../img/wh.png"></image>
+		</view>
+		<text class="persontotal">切换账号</text>
+		<view class="jt2">
+			<image src="../../img/jt2.png"></image>
+		</view>
+	</view>
+</view>

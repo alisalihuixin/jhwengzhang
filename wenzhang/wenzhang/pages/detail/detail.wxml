@@ -1,0 +1,70 @@
+<view style="margin-bottom:200rpx">
+	<view class="videowrap" wx:if="{{res.type==2}}">
+		<video src="{{res.videourl}}" controls="true" poster="{{res.thumburl}}"></video>
+	</view>
+	<view class="wemain">
+		<view class="title">
+			{{res.title}}
+		</view>
+		<view class="ins">
+			<text wx:for="{{res.tags}}" wx:key="index">{{item}}</text>
+		</view>
+		<view class="banner">
+			<image src="{{res.thumburl}}" wx:if="{{res.type==1}}"></image>
+		</view>
+		<rich-text class="content" nodes="{{res.content}}"></rich-text>
+	</view>
+
+	<view class="scrollview-lists" data-id="{{item.id}}" id="text{{index}}" wx:key="index" wx:for="{{content}}">
+		<view class="leftwrap">
+			<view class="about" bindtap="changepic" data-id="{{item.id}}">{{item.title}}</view>
+			<view class="share1">
+				<view class="share-wrap">
+					<image src="../../img/fx.png" bindtap="wenshare" data-brief="{{item.brief}}" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}"  data-id="{{item.id}}"></image>
+				</view>
+				<text class="sharetext"  bindtap="wenshare" data-brief="{{item.brief}}" data-title="{{item.title}}" data-thumburl="{{item.thumburl}}"  data-id="{{item.id}}">分享</text>
+				<text class="nowlook" bindtap="changepic" data-id="{{item.id}}">立即查看</text>
+			</view>
+		</view>
+		<view class="rightwrap">
+			<image src="{{item.thumburl}}"></image>
+		</view>
+	</view>
+	<!-- <view wx:if="{{ff}}">{{options}}</view>
+	<view wx:if="{{ff}}">{{optionsid}}</view>
+	<view wx:if="{{ff}}">{{optionsuid}}</view> -->
+</view>
+
+<view class="btn">
+	<button class="sharebtn btnleft" open-type="share">
+		分享给好友
+	</button>
+	<button class="sharebtn btnright" bindtap="everysharequan" data-title="{{res.title}}" data-id="{{res.id}}" data-thumburl="{{res.thumburl}}" data-brief="{{res.brief}}">
+		分享到朋友圈
+	</button>
+</view>
+
+<view class='share' wx:if="{{flage}}">
+	<canvas canvas-id="shareCanvas" style="width:600rpx;height:680rpx"></canvas>
+</view>
+
+
+<!-- 分享到好友 朋友圈 -->
+<view wx:if="{{viedoshare}}" style="background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;left:0;top:0">
+	<view class="sharewrap">
+		<view class="header-share" style="width:100%;height:60rpx;line-height:60rpx;font-size:30rpx;text-align:center">
+			分享给好友
+		</view>
+		<view style="border-bottom:1px solid #eee;overflow:hidden">
+			<button class="friend friends" open-type="share">
+				<image src="../../img/weixin.png"></image>
+				<view>分享给好友</view>
+			</button>
+			<view class="friend quan" bindtap="sharequan">
+				<image src="../../img/pengyou.png"></image>
+				<view>分享到朋友圈</view>
+			</view>
+		</view>
+		<view bindtap="cancel" style="width:100%;font-size:30rpx;text-align:center;line-height:64rpx">取消</view>
+	</view>
+</view>

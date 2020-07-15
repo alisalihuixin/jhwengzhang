@@ -1,0 +1,27 @@
+/**app.wxss**/
+body {
+  font-family: PingFang-SC;
+}
+
+page {
+  background-color: #F6F6F6;
+  width: 100%;
+}
+
+button {
+  background-color: #fff;
+  border-radius: 0rpx;
+  padding: 0rpx !important;
+  margin: 0rpx !important;
+  display: inline-block;
+  line-height: 1;
+}
+button:not([size='mini']) {
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+  }
+button::after {
+  /*button的边框样式是通过::after方式实现的*/
+  border: none;
+}

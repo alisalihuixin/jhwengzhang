@@ -1,0 +1,200 @@
+/* pages/detail/detail.wxss */
+.videowrap {
+  width: 100%;
+  height: 420rpx;
+}
+
+.videowrap video {
+  width: 100%;
+  height: 420rpx;
+}
+
+.wemain {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+}
+
+.title {
+  color: #333333;
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-bottom: 34rpx;
+}
+
+.ins text {
+  background: rgba(245, 247, 254, 1);
+  border: 1px solid rgba(207, 210, 238, 1);
+  border-radius: 4px;
+  font-size: 26rpx;
+  color: #99A9F0;
+  padding: 5rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+
+.ins {
+  margin-bottom: 28rpx;
+}
+
+.banner {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.banner image {
+  width: 710rpx;
+  height: 265rpx;
+}
+
+.content {
+  font-size: 30rpx;
+  color: #333;
+  line-height: 48rpx;
+  font-family: PingFang-SC-Medium;
+}
+
+.scrollview-lists {
+  /* width: 100%; */
+  height: 185rpx;
+  padding-top: 40rpx;
+  padding-left: 28rpx;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.leftwrap {
+  float: left;
+}
+
+.about {
+
+  width: 424rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  color: #0F1E2D;
+  height: 104rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.share1 {
+  height: 100rpx;
+}
+
+.share-wrap {
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+}
+
+.share-wrap image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+
+.rightwrap {
+  width: 250rpx;
+  height: 150rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.rightwrap image {
+  width: 219rpx;
+  height: 150rpx;
+}
+
+.sharetext {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #3157FF;
+  line-height: 70rpx;
+}
+
+.nowlook {
+  font-size: 26rpx;
+  color: #9FA3A9;
+  line-height: 70rpx;
+  float: right;
+}
+
+.btn {
+  width: 90%;
+  margin-left: 5%;
+  height: 100rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 8rpx 6rpx 29rpx 0rpx rgba(0, 0, 0, 0.09);
+  border-radius: 100rpx;
+  position: fixed;
+  bottom: 55rpx;
+}
+button.sharebtn{
+  width: 50% !important;
+  text-align: center;
+  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: block;
+  float: left;
+}
+.btnleft{
+  border-radius:100rpx 0 0 100rpx;
+  background-color: #fff;
+  color: #3158FF;
+}
+.btnright{
+  border-radius: 0  100rpx  100rpx 0;
+  background-color: #3158FF;
+  color: #fff;
+}
+page{
+  background-color: #eee;
+}
+.share{
+  width: 600rpx;
+  height: 680rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 100rpx;
+  margin: auto;
+}
+.sharewrap{
+  position: fixed;
+  left: 10%;
+  top: 300rpx;
+  width: 80%;
+  height: 310rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 0 15rpx 4rpx rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+.friend{
+  width: 50%;
+  text-align: center;
+  font-size: 26rpx;
+  float: left;
+  height: 120rpx;
+  padding: 30rpx 0;
+  font-weight: bold;
+}
+button.friend{
+  width: 50% !important;
+  text-align: center;
+  font-size: 26rpx;
+  float: left;
+  height: 140rpx;
+  padding-top: 30rpx !important;
+  padding-bottom: 30rpx !important;
+}
+.friend image{
+  width: 70rpx;
+  height: 70rpx;
+}

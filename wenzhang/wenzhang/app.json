@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/person/person",
+    "pages/main/main",
+    "pages/detail/detail",
+    "pages/persontotal/persontotal",
+    "pages/companytotal/companytotal",
+    "pages/personinfo/personinfo",
+    "pages/changecompanyname/changecompanyname",
+    "pages/usebook/usebook",
+    "pages/category/category",
+    "pages/personunlogin/personunlogin",
+    "pages/myerliao/myerliao",
+    "pages/parter/parter",
+    "pages/friends/friends",
+    "pages/login/login",
+    "pages/shouquan/shouquan",
+    "pages/getphone/getphone"
+  ],
+
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#3157FF",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "资讯饵料",
+        "iconPath": "./img/home1.png",
+        "selectedIconPath": "./img/home.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "./img/fabu@2x.png",
+        "selectedIconPath": "./img/fabu@2x.png"
+      },
+      {
+        "pagePath": "pages/personunlogin/personunlogin",
+        "text": "个人中心",
+        "iconPath": "./img/my1.png",
+        "selectedIconPath": "./img/my.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3258FF",
+    "navigationBarTitleText": "钜惠文章",
+    "navigationBarTextStyle": "white"
+
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+
+}
